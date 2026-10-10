@@ -40,6 +40,13 @@ export function ensureSchema() {
         status TEXT NOT NULL DEFAULT 'new',
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )`,
+      sql`CREATE TABLE IF NOT EXISTS newsletter_signups (
+        id TEXT PRIMARY KEY,
+        email TEXT NOT NULL UNIQUE,
+        source TEXT NOT NULL DEFAULT 'evlv-today-instagram',
+        status TEXT NOT NULL DEFAULT 'subscribed',
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )`,
     ]).then(() => undefined);
   }
   return schemaPromise;

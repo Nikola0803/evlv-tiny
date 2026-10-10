@@ -39,6 +39,9 @@
   .booking-cta small { font-size: 10.5px; }
   .pep-talk-note { grid-template-columns: 1fr; gap: 5px; padding: 13px 14px; }
   .pep-talk-note span { font-size: 10.5px; }
+  .newsletter { grid-template-columns: auto 1fr; padding: 15px; }
+  .newsletter-form, .newsletter-success { grid-column: 1 / -1; }
+  .newsletter-copy h2 { font-size: 16px; }
   .utility-links { gap: 4px 0; margin-top: 17px; }
   .utility-links a { padding: 6px 10px; font-size: 10px; }
   footer { margin-top: 23px; font-size: 8px; }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint } from "lucide-react";
+import NewsletterSignup from "./newsletter-signup";
 
 const brands = [
   { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE" },
@@ -40,6 +41,7 @@ export default function Home() {
           <ArrowRight className="booking-arrow" size={19} />
         </Link>
         <div className="pep-talk-note"><strong>Bring the question.</strong><span>A symptom, a protocol, or something you read about peptides. We give clear wellness guidance and say when a physician is the right next step.</span></div>
+        <NewsletterSignup />
         <nav className="utility-links" aria-label="More EVLV links">{utilityLinks.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
         <footer><span>EVLV</span><span className="footer-rule" /><span>Built for better decisions.</span></footer>
       </section>
