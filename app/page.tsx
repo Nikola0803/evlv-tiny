@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint } from "lucide-react";
 
 const brands = [
-  { name: "EVLV Peptides", descriptor: "Research Peptides & Laboratory Supplies", action: "Explore Research Products", href: "https://evlvpeptides.com", className: "brand-card peptides", icon: Dna, mark: "EVLV" },
-  { name: "EVLV Today", descriptor: "Wellness Optimisation", action: "Discover EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "EVLV TODAY" },
+  { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE" },
+  { name: "EVLV Peptides", descriptor: "Shop Research Peptides & Laboratory Supplies", action: "Shop Research Peptides", href: "https://evlvpeptides.com", className: "brand-card peptides", icon: Dna, mark: "EVLV" },
   { name: "ZooNetics", descriptor: "Pet Peptides & Research", action: "Explore ZooNetics", href: "https://zoonetics.co", className: "brand-card zoonetics", icon: PawPrint, mark: "ZOONETICS" },
 ];
 
@@ -21,9 +21,9 @@ export default function Home() {
       <section className="hub-wrap" aria-labelledby="hub-title">
         <header className="hub-header">
           <img className="evlv-logo" src="/logo/evlv-logo-light.png" alt="EVLV" />
-          <p className="eyebrow">The EVLV ecosystem</p>
-          <h1 id="hub-title">Choose your path.</h1>
-          <p className="intro">Research, wellness, and animal care—three focused brands, one standard.</p>
+          <p className="eyebrow">EVLV Today • Pep Talk</p>
+          <h1 id="hub-title">A real answer, in 15 minutes.</h1>
+          <p className="intro">Bring the wellness question you cannot get a straight answer on. We will help you understand it and decide what to do next.</p>
         </header>
         <div className="brand-grid">
           {brands.map(({ icon: Icon, ...brand }) => (
@@ -36,9 +36,10 @@ export default function Home() {
         </div>
         <Link href="/book" className="booking-cta">
           <span className="booking-icon"><CalendarDays size={20} /></span>
-          <span><strong>Schedule a call</strong><small>Choose a time that works for you</small></span>
+          <span><strong>Book a free Pep Talk</strong><small>15 minutes with the EVLV Today wellness team</small></span>
           <ArrowRight className="booking-arrow" size={19} />
         </Link>
+        <div className="pep-talk-note"><strong>Bring the question.</strong><span>A symptom, a protocol, or something you read about peptides. We give clear wellness guidance and say when a physician is the right next step.</span></div>
         <nav className="utility-links" aria-label="More EVLV links">{utilityLinks.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
         <footer><span>EVLV</span><span className="footer-rule" /><span>Built for better decisions.</span></footer>
       </section>

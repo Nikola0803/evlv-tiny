@@ -3,8 +3,8 @@ import "./globals.css";
 import "./mobile.css";
 
 export const metadata: Metadata = {
-  title: "EVLV | Choose Your Path",
-  description: "Explore EVLV Peptides, EVLV Today, ZooNetics, or schedule a call with the EVLV team.",
+  title: "EVLV Today | Pep Talk",
+  description: "Book a free 15-minute EVLV Today Pep Talk, explore wellness optimisation, or visit the EVLV family of brands.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
