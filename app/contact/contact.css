@@ -1,0 +1,8 @@
+.contact-page{min-height:100vh;background:radial-gradient(circle at 75% 0,#27342f,#101512 55%);color:var(--ivory)}
+.contact-page .booking-nav img{filter:none}.contact-back{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:rgba(242,238,230,.65)}
+.contact-layout{width:min(100% - 34px,960px);margin:24px auto 70px;display:grid;grid-template-columns:360px 1fr;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:#f7f4ee;box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.contact-aside{padding:45px 38px;background:linear-gradient(155deg,#1c2d26,#111814)}.contact-aside .eyebrow{margin:0 0 16px}.contact-aside h1{font-size:45px;line-height:1.04}.contact-aside>p{margin:18px 0 32px;color:rgba(242,238,230,.55);font-size:13px;line-height:1.7}
+.contact-detail{display:flex;align-items:center;gap:13px;padding:15px 0;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:var(--ivory)}.contact-detail svg{color:var(--copper)}.contact-detail small{display:block;margin-bottom:3px;color:rgba(242,238,230,.4);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.contact-main{padding:44px;color:#151917}.contact-main h2{margin:0 0 26px;font-family:Georgia,"Times New Roman",serif;font-size:34px;font-weight:400}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contact-form .field textarea{min-height:150px}
+@media(max-width:760px){.contact-layout{grid-template-columns:1fr}.contact-aside,.contact-main{padding:30px 24px}.contact-aside h1{font-size:39px}}
+@media(max-width:430px){.contact-layout{width:min(100% - 20px,960px);margin-top:4px}.contact-form{grid-template-columns:1fr}.contact-form .field.full,.contact-form .submit-booking,.contact-form .form-status{grid-column:1}}
