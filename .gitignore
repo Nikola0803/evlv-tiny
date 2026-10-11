@@ -71,3 +71,4 @@ next-env.d.ts
 /drizzle.config.ts
 /pnpm-workspace.yaml
 /app/chatgpt-auth.ts
+tsconfig.tsbuildinfo

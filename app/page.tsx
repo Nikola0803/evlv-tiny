@@ -43,7 +43,16 @@ export default function Home() {
         <div className="pep-talk-note"><strong>Bring the question.</strong><span>A symptom, a protocol, or something you read about peptides. We give clear wellness guidance and say when a physician is the right next step.</span></div>
         <NewsletterSignup />
         <nav className="utility-links" aria-label="More EVLV links">{utilityLinks.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
-        <footer><span>EVLV</span><span className="footer-rule" /><span>Built for better decisions.</span></footer>
+        <footer>
+          <span>EVLV</span><span className="footer-rule" /><span>Built for better decisions.</span>
+          <div className="footer-contact">
+            <a href="tel:+15417095434">(541) 709-5434</a>
+            <span className="footer-rule" />
+            <a href="mailto:office@evlvpeptides.com">office@evlvpeptides.com</a>
+            <span className="footer-rule" />
+            <a href="mailto:orders@evlvpeptides.com">orders@evlvpeptides.com</a>
+          </div>
+        </footer>
       </section>
     </main>
   );
