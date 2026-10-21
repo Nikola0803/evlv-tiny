@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint } from "lucide-react";
+import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint, ShieldCheck } from "lucide-react";
 import NewsletterSignup from "./newsletter-signup";
 
 const brands = [
@@ -35,6 +35,16 @@ export default function Home() {
             </a>
           ))}
         </div>
+        <a className="veteran-card" href="https://evlvpeptides.com/heroes-discount" rel="noreferrer">
+          <img src="/images/evlv-veteran-program.webp" alt="Veterans standing together beneath the American flag" />
+          <span className="veteran-shade" aria-hidden="true" />
+          <span className="veteran-content">
+            <span className="veteran-kicker"><ShieldCheck size={15} strokeWidth={1.8} /> EVLV Veteran Program</span>
+            <strong>25% off for life.</strong>
+            <span className="veteran-copy">For those who served. Verify once, then receive 25% off every eligible EVLV Peptides order.</span>
+            <span className="veteran-action">View the Veteran Program <ArrowRight size={17} /></span>
+          </span>
+        </a>
         <Link href="/book" className="booking-cta">
           <span className="booking-icon"><CalendarDays size={20} /></span>
           <span><strong>Book a free Pep Talk</strong><small>15 minutes with the EVLV Today wellness team</small></span>
