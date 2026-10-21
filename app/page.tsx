@@ -3,9 +3,9 @@ import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint, ShieldCheck } from "luci
 import NewsletterSignup from "./newsletter-signup";
 
 const brands = [
-  { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE", image: "/images/evlv-today-card-v1.webp", alt: "Two people having a calm wellness conversation at sunrise" },
   { name: "EVLV Peptides", descriptor: "Shop Research Peptides & Laboratory Supplies", action: "Shop Research Peptides", href: "https://evlvpeptides.com", className: "brand-card peptides", icon: Dna, mark: "EVLV", image: "/images/evlv-peptides-card-v1.webp", alt: "Peptide molecular structure and laboratory glassware" },
   { name: "ZooNetics", descriptor: "Pet Peptides & Research", action: "Explore ZooNetics", href: "https://zoonetics.co", className: "brand-card zoonetics", icon: PawPrint, mark: "ZOONETICS", image: "/images/zoonetics-card-v1.webp", alt: "Dog and cat surrounded by botanical and molecular forms" },
+  { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE", image: "/images/evlv-today-card-v1.webp", alt: "Two people having a calm wellness conversation at sunrise" },
 ];
 
 const utilityLinks = [
@@ -22,10 +22,20 @@ export default function Home() {
       <section className="hub-wrap" aria-labelledby="hub-title">
         <header className="hub-header">
           <img className="evlv-logo" src="/logo/evlv-logo-light.png" alt="EVLV" />
-          <p className="eyebrow">EVLV Today • Pep Talk</p>
-          <h1 id="hub-title">A real answer, in 15 minutes.</h1>
-          <p className="intro">Bring the wellness question you cannot get a straight answer on. We will help you understand it and decide what to do next.</p>
+          <p className="eyebrow">EVLV Brand Hub</p>
+          <h1 id="hub-title">Everything EVLV, in one place.</h1>
+          <p className="intro">Access the Veteran Program, shop research peptides, explore ZooNetics, or connect with EVLV Today.</p>
         </header>
+        <a className="veteran-card" href="https://evlvpeptides.com/heroes-discount" rel="noreferrer">
+          <img src="/images/evlv-veteran-program.webp" alt="Veterans standing together beneath the American flag" />
+          <span className="veteran-shade" aria-hidden="true" />
+          <span className="veteran-content">
+            <span className="veteran-kicker"><ShieldCheck size={15} strokeWidth={1.8} /> EVLV Veteran Program</span>
+            <strong>25% off for life.</strong>
+            <span className="veteran-copy">For those who served. Verify once, then receive 25% off every eligible EVLV Peptides order.</span>
+            <span className="veteran-action">View the Veteran Program <ArrowRight size={17} /></span>
+          </span>
+        </a>
         <div className="brand-grid">
           {brands.map(({ icon: Icon, image, alt, ...brand }) => (
             <a key={brand.name} href={brand.href} className={brand.className} rel="noreferrer">
@@ -37,16 +47,6 @@ export default function Home() {
             </a>
           ))}
         </div>
-        <a className="veteran-card" href="https://evlvpeptides.com/heroes-discount" rel="noreferrer">
-          <img src="/images/evlv-veteran-program.webp" alt="Veterans standing together beneath the American flag" />
-          <span className="veteran-shade" aria-hidden="true" />
-          <span className="veteran-content">
-            <span className="veteran-kicker"><ShieldCheck size={15} strokeWidth={1.8} /> EVLV Veteran Program</span>
-            <strong>25% off for life.</strong>
-            <span className="veteran-copy">For those who served. Verify once, then receive 25% off every eligible EVLV Peptides order.</span>
-            <span className="veteran-action">View the Veteran Program <ArrowRight size={17} /></span>
-          </span>
-        </a>
         <Link href="/book" className="booking-cta">
           <span className="booking-icon"><CalendarDays size={20} /></span>
           <span><strong>Book a free Pep Talk</strong><small>15 minutes with the EVLV Today wellness team</small></span>
