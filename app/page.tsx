@@ -3,9 +3,9 @@ import { ArrowRight, CalendarDays, Dna, Leaf, PawPrint, ShieldCheck } from "luci
 import NewsletterSignup from "./newsletter-signup";
 
 const brands = [
-  { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE" },
-  { name: "EVLV Peptides", descriptor: "Shop Research Peptides & Laboratory Supplies", action: "Shop Research Peptides", href: "https://evlvpeptides.com", className: "brand-card peptides", icon: Dna, mark: "EVLV" },
-  { name: "ZooNetics", descriptor: "Pet Peptides & Research", action: "Explore ZooNetics", href: "https://zoonetics.co", className: "brand-card zoonetics", icon: PawPrint, mark: "ZOONETICS" },
+  { name: "EVLV Today", descriptor: "Wellness Optimisation & Pep Talk", action: "Explore EVLV Today", href: "https://evlvtoday.com", className: "brand-card today", icon: Leaf, mark: "START HERE", image: "/images/evlv-today-card-v1.webp", alt: "Two people having a calm wellness conversation at sunrise" },
+  { name: "EVLV Peptides", descriptor: "Shop Research Peptides & Laboratory Supplies", action: "Shop Research Peptides", href: "https://evlvpeptides.com", className: "brand-card peptides", icon: Dna, mark: "EVLV", image: "/images/evlv-peptides-card-v1.webp", alt: "Peptide molecular structure and laboratory glassware" },
+  { name: "ZooNetics", descriptor: "Pet Peptides & Research", action: "Explore ZooNetics", href: "https://zoonetics.co", className: "brand-card zoonetics", icon: PawPrint, mark: "ZOONETICS", image: "/images/zoonetics-card-v1.webp", alt: "Dog and cat surrounded by botanical and molecular forms" },
 ];
 
 const utilityLinks = [
@@ -27,8 +27,10 @@ export default function Home() {
           <p className="intro">Bring the wellness question you cannot get a straight answer on. We will help you understand it and decide what to do next.</p>
         </header>
         <div className="brand-grid">
-          {brands.map(({ icon: Icon, ...brand }) => (
+          {brands.map(({ icon: Icon, image, alt, ...brand }) => (
             <a key={brand.name} href={brand.href} className={brand.className} rel="noreferrer">
+              <img className="brand-art" src={image} alt={alt} />
+              <span className="brand-art-shade" aria-hidden="true" />
               <div className="brand-card-top"><span className="brand-icon"><Icon size={18} strokeWidth={1.7} /></span><span className="brand-mark">{brand.mark}</span></div>
               <div><h2 className={brand.name === "ZooNetics" ? "zoonetics-title" : undefined}>{brand.name}{brand.name === "ZooNetics" && <small>by EVLV</small>}</h2><p>{brand.descriptor}</p></div>
               <span className="brand-action">{brand.action}<ArrowRight size={17} /></span>
